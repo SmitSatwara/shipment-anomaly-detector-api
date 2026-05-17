@@ -5,7 +5,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.smit</groupId>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.14</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.sad</groupId>
     <artifactId>shipment-anomaly-detector-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -16,12 +23,35 @@
         <module>order-module</module>
         <module>shipment-module</module>
         <module>incident-module</module>
-        <module>rag-module</module>
     </modules>
 
     <properties>
         <java.version>21</java.version>
-        <spring-boot.version>3.5.14</spring-boot.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.sad</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sad</groupId>
+                <artifactId>order-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sad</groupId>
+                <artifactId>shipment-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sad</groupId>
+                <artifactId>incident-module</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

@@ -2,20 +2,25 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for shipment-anomaly-detector-api" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
+        <module name="incident-module" />
+        <module name="shipment-module" />
+        <module name="order-module" />
+        <module name="common" />
         <module name="shipment-anomaly-detector-api" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="incident-module" options="-parameters" />
+      <module name="order-module" options="-parameters" />
       <module name="shipment-anomaly-detector-api" options="-parameters" />
+      <module name="shipment-module" options="-parameters" />
     </option>
   </component>
 </project>
