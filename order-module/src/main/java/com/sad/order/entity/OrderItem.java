@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Setter
 public class OrderItem extends com.sad.common.entity.BaseEntity {
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
     @ManyToOne
