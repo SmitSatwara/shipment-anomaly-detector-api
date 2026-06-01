@@ -11,5 +11,4 @@ public class OrderItemRequest {
     private Long productId;
     private Long supplierId;
     private Integer quantity;
-    private BigDecimal unitPrice;
 }

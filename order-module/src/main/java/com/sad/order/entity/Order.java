@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -21,6 +22,8 @@ public class Order extends BaseEntity {
     private OrderStatus orderStatus;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> orderItems;
+    @Column(nullable = false)
+    private BigDecimal totalPrice;
 
 
 

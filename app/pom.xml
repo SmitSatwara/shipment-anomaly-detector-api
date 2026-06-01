@@ -46,6 +46,14 @@
 			<groupId>com.sad</groupId>
 			<artifactId>order-module</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.sad</groupId>
+			<artifactId>shipment-module</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sad</groupId>
+			<artifactId>incident-module</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

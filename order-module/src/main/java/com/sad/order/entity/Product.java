@@ -29,5 +29,7 @@ public class Product extends BaseEntity {
     private BigDecimal width;
     @Column(nullable = false)
     private BigDecimal height;
+    @Column(nullable = false)
+    private BigDecimal unitPrice;
 
 }
