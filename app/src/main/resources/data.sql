@@ -22,3 +22,8 @@ VALUES
     ('Office Chair', 'Furniture', 'Ergonomic office chair', 12.00, 65.00, 65.00, 110.00, 15000.00, NOW(), NOW()),
     ('Wireless Keyboard', 'Electronics', 'Bluetooth keyboard', 0.80, 45.00, 15.00, 3.00, 3500.00, NOW(), NOW()),
     ('Samsung TV 55 inch', 'Electronics', '4K Smart TV', 18.00, 130.00, 75.00, 10.00, 65000.00, NOW(), NOW());
+
+INSERT INTO addresses (entity_type, entity_id, street, city, state, country, is_default, created_at, updated_at)
+VALUES ('CUSTOMER', 1, '123 MG Road', 'Ahmedabad', 'Gujarat', 'India', true, NOW(), NOW()),
+       ('CUSTOMER', 2, '456 FC Road', 'Pune', 'Maharashtra', 'India', true, NOW(), NOW()),
+       ('CUSTOMER', 3, '789 Brigade Road', 'Bangalore', 'Karnataka', 'India', true, NOW(), NOW());

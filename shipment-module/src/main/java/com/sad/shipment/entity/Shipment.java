@@ -16,7 +16,7 @@ public class Shipment extends com.sad.common.entity.BaseEntity {
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
     @ManyToOne
-    @JoinColumn(name = "carrier_id",nullable = false)
+    @JoinColumn(name = "carrier_id")
     private Carrier carrier;
     @Column(nullable = false,unique = true)
     private String trackingNumber;
@@ -30,7 +30,7 @@ public class Shipment extends com.sad.common.entity.BaseEntity {
     @ManyToOne
     @JoinColumn(name = "destination_address_id")
     private Address destination;
-    @Column(nullable = false)
+
     private LocalDate expectedDeliveryDate;
     @Column
     private LocalDate actualDeliveryDate;
